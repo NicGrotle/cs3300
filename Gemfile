@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'devise'
+
 # Use ActiveStorage variant
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
