@@ -14,7 +14,14 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+gem 'mini_racer'
+  
+gem 'devise'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails' 
+end
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -26,14 +33,13 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'devise'
-
 # Use ActiveStorage variant
 group :production do
   gem 'pg', '~> 0.21' # for Heroku deployment
   gem 'rails_12factor'
 end
 # gem 'mini_magick', '~> 4.8'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -61,6 +67,7 @@ group :test do
   gem 'simplecov', require: false
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara'
+  
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
@@ -69,14 +76,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'mini_racer'
-  
-  group :development, :test do
-    gem 'rspec-rails', '~> 3.7'
-  end
-  
-  group :development, :test do
-    gem 'capybara'
-  end
+group :development, :test do
+  gem 'capybara'
+end
 
-  gem 'simplecov', require: false, group: :test
+gem 'simplecov', require: false, group: :test
